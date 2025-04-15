@@ -766,7 +766,23 @@ with col2:
                                 help="Click to download the edited image",
                                 use_container_width=True  # Adjust the button width to fit the container
                             )
+    
+    if st.session_state.page == "Database":
 
+        st.markdown("<h3 style='text-align: center; margin-top : 50px'>Database</h3>", unsafe_allow_html=True)
+
+        st.markdown(
+            "<p style='font-size: 18px;'><br>The database contains the file processes as history.</p>",
+        unsafe_allow_html=True
+        )
+
+        # Display database content as a table
+        st.markdown("<h5 style='text-align: center; margin-top : 20px'>Process History Table</h5>", unsafe_allow_html=True)
+
+        logs = get_logs()
+        df_logs = pd.DataFrame(logs, columns=["Tarih", "Saat", "Dosya Adı", "Kullanılan Metot"])
+        st.dataframe(df_logs, use_container_width=True)
+        
     if st.session_state.page == 'About':
 
         st.markdown("<h3 style='text-align: center; margin-top : 50px'>About</h3>", unsafe_allow_html=True)
@@ -784,9 +800,6 @@ with col2:
             "<ul style='font-size: 18px;'>"
             "<li>Image comparison by slider</li>"
             "<li>Filtering</li>"
-            "<li>Edge detection</li>"
-            "<li>Thresholding</li>"
-            "<li>Slicing</li>"
             "<li>Image enhancement</li>"
             "<li>and others.</li>"
             "</ul>",
