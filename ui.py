@@ -13,7 +13,7 @@ init_db()
 
 # Sayfa basligi
 st.set_page_config(
-    page_title="Image Editor App", 
+    page_title="PixelMistry", 
     layout="wide",
     page_icon="logo.png")
 
@@ -138,7 +138,7 @@ st.markdown(
             <img src='https://upload.wikimedia.org/wikipedia/commons/c/cb/Processing_2021_logo.svg' style='width: 50px; height: 50px; margin-left: 10px;' />
         <div style='display: flex; align-items: center;'>
             <h2 style='margin: 0; margin-left: 15px;'>
-                Image Editor App
+                PixelMistry
             </h2>
         </div>
     </div>
@@ -176,7 +176,7 @@ with col2:
     if st.session_state.page == 'Dashboard':
         st.markdown("<h3 style='text-align: center; margin-top : 50px'>Dashboard</h3>", unsafe_allow_html=True)
         st.markdown(
-            "<p style='font-size: 18px;'><br>Welcome to Image Editor App!<br><br>This is an image editor app that allows you to edit images using various tools.</p>",
+            "<p style='font-size: 18px;'><br>Welcome to PixelMistry!<br><br>This is an image editing app that allows you to edit images using various tools.</p>",
             unsafe_allow_html=True
         )
 
@@ -766,7 +766,7 @@ with col2:
                                 help="Click to download the edited image",
                                 use_container_width=True  # Adjust the button width to fit the container
                             )
-    
+
     if st.session_state.page == "Database":
 
         st.markdown("<h3 style='text-align: center; margin-top : 50px'>Database</h3>", unsafe_allow_html=True)
@@ -782,6 +782,7 @@ with col2:
         logs = get_logs()
         df_logs = pd.DataFrame(logs, columns=["Tarih", "Saat", "Dosya Adı", "Kullanılan Metot"])
         st.dataframe(df_logs, use_container_width=True)
+
         
     if st.session_state.page == 'About':
 
@@ -800,6 +801,9 @@ with col2:
             "<ul style='font-size: 18px;'>"
             "<li>Image comparison by slider</li>"
             "<li>Filtering</li>"
+            "<li>Edge detection</li>"
+            "<li>Thresholding</li>"
+            "<li>Slicing</li>"
             "<li>Image enhancement</li>"
             "<li>and others.</li>"
             "</ul>",
