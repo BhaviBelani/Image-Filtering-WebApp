@@ -12,22 +12,7 @@ This project provides an interactive **Python + Streamlit** dashboard for visual
 🔹 **Blurring Techniques**  
   • Gaussian Blur  
   • Median Blur  
-  • Average Blur  
-🔹 **Image Sharpening**  
-🔹 **Edge Detection**  
-  • Sobel  
-  • Prewitt  
-  • Roberts Cross  
-  • Scharr  
-  • Laplacian of Gaussian (LoG)  
-  • Canny  
-🔹 **Thresholding & Segmentation**  
-  • Binary Threshold  
-  • Adaptive Threshold  
-  • Gray Level Slicing  
-  • Bit-Plane Slicing  
-🔹 **Word Cloud Visualization**  
-🔹 Clean, interactive **Streamlit** interface
+  • Average Blur
 
 ---
 
@@ -38,17 +23,3 @@ This project provides an interactive **Python + Streamlit** dashboard for visual
 - `wordcloud`
 - `PIL`
 - `streamlit`
-
----
-
-## 📄 License
-
-Licensed under the **MIT License**. See the `LICENSE` file for more information.
-
----
-
-## 👨‍💻 Developer
-
-Berk Han Tugrul  
-📧 berkhantugrul@outlook.com 
-🔗 [LinkedIn](https://www.linkedin.com/berkhantugrul) | [GitHub](https://github.com/berkhantugrul)
